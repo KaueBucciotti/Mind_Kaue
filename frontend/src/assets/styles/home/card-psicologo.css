@@ -1,0 +1,186 @@
+@import url("../main.css");
+@import url("../ui/buttons.css");
+@import url("../ui/icons.css");
+
+.section-home{
+    background-color: var(--alabaster-100);
+    border-radius: var(--border-radius-md);
+    margin: var(--spacing-xs);
+    padding: 10px;
+    width:auto;
+    box-sizing: border-box;
+}
+
+.area-card-psicologos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+    align-self: center;
+}
+
+/* Cards (default columun) ------------------- */
+
+.card-psi {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,
+            var(--silver-chalice-100) 20%,
+            var(--dairy-cream-100) 20%);
+    padding: 20px;
+    gap: 10px;
+    width:250px;
+    height: 350px;
+    margin: 0px 5px 15px 5px;
+}
+
+.infos-psi {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    padding-top: 2rem;
+    border-bottom: 0.5px solid var(--silver-chalice-100);
+}
+
+.informacoes-gerais-psi-card{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.local-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.infos-psi h1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.infos-psi p,
+.title-conhecimentos{
+    font-size: 0.8rem;
+    margin: 4px 0;
+    text-align: left;
+    font-weight: 500;
+}
+
+.tags-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.tags-cards a {
+    background: var(--white-default-100);
+    color: var(--black-default-100);
+    border: 1px solid var(--silver-chalice-100);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 70%;
+    font-weight: 500;
+    height: max-content;
+}
+
+.psi-foto-perfil {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.psi-foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.container-btn-ver{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+/* Cards rows */
+
+.card-psi.row {
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+  gap: 20px;
+  background: linear-gradient(to right,
+            var(--silver-chalice-100) 10%,
+            var(--dairy-cream-100) 10%);
+}
+
+.card-psi.row .psi-foto-perfil {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.card-psi.row .infos-psi.row {
+  padding: 0 20px;
+  border-bottom: none;
+  border-right: 0.5px solid var(--silver-chalice-100);
+}
+
+.card-psi.row .container-btn-ver {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.especialidades-psicologo.row{
+    width:100%;
+    padding: 0 20px;
+}
+
+.informacoes-gerais-psi-card.row{
+    display:flex;
+    flex-direction:row;
+    width: 100%;
+}
+
+@media(max-width:716px){
+    .card-psi.row {
+        flex-direction: column; 
+        align-items: center; 
+        max-width: 100%;
+        background: linear-gradient(
+        to bottom,
+        var(--silver-chalice-100) 20%,
+        var(--dairy-cream-100) 20%
+        ); 
+    }
+    .informacoes-gerais-psi-card.row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .card-psi.row .infos-psi.row {
+        border-bottom: 0.5px solid var(--silver-chalice-100);
+        border-right: none;
+        padding: 10px 0; 
+    }
+    .especialidades-psicologo.row{
+        padding: 0;
+    }
+}

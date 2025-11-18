@@ -1,0 +1,270 @@
+@import url("../main.css");
+
+/* Navbar button */
+.nav-btn-login{
+    box-sizing: border-box;
+    background-color: var(--white-default-100);
+    color: var(--dark-100);
+    padding:7px 29px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 3px solid var(--green-default-100);
+;
+    border-radius: var(--spacing-xs);
+    cursor: pointer;
+}
+
+.nav-btn-login:hover{
+    background-color: #daf7eb;
+}
+
+/* Button (confirmação) */
+
+.button-confirm{
+    background-color: var(--green-default-100);
+    color: var(--white-default-100);
+    padding:10px 20px;
+    font-weight: 400;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm)
+}
+
+.button-confirm:hover{
+    background-color:var( --sea-green-100);
+}
+
+/* Botão (processeguir) */
+
+.button-proceed{
+    background-color: var(--red-default-100);
+    color: var(--black-default-100);
+    padding:10px 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+}
+
+.button-proceed:hover{
+    background-color: var(--paarl-100);
+}
+
+/* Botão (atenção) */
+
+.button-attention{
+    background-color: var(--metallic-copper-100);
+    color: var(--white-default-100);
+    padding:10px 20px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+}
+
+.button-attention:hover{
+    background-color: rgb(85, 35, 21);
+}
+
+/* Botão ("Planos")  */
+
+.button-planos{
+    font-size: clamp(1rem, 5vw, 1.4rem);
+    background-color: var(--white-default-100);
+    border: none;
+    padding:10px 20px;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+}
+
+.button-planos:hover{
+    background-color: #D6D6D6;
+}
+
+/* Botão ("Cancelar") */
+
+.button-cancelar{
+    background-color: var(--dove-gray-100);
+    color: var(--white-default-100);
+    padding:10px 20px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+}
+
+.button-cancelar:hover{
+    background-color: var(--mine-shaft01-100);
+}
+
+/* Botão de ("Voltar") e ("Mais") */
+
+.button-open-pop-up{
+    background-color: var(--alto-100);
+    color: var(--dark-100);
+    padding:10px 20px;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    display:flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+    width: max-content;
+}
+
+.button-open-pop-up:hover{
+    background-color: var(--silver-chalice-100);
+}
+
+/* Botão de ("ver") dos card psi*/
+.button-ver-card-psi {
+    cursor: pointer;
+    color: var(--white-default-100);
+    background-color: var(--red-default-100);
+    padding:10px 20px;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+}
+.button-ver-card-psi:hover {
+    background-color: var(--paarl-100);
+}
+
+/* Botão de ("filtragem") da home*/
+
+/* .checkbox {
+    position: relative;
+    background: var(--green-default-100);
+    flex-direction: column;
+    display: none;
+    padding: 6px;
+    padding-left: 0;
+    border-radius: 10px;
+}
+
+#filtro-checkbox, #filtro-local-checkbox {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 0px 0px 8px 8px;
+    background: var(--green-default-100);
+    cursor: pointer;
+}
+
+#filtro-checkbox.show, #filtro-local-checkbox.show{
+    transform: scaleY(1);
+    top: -10px;
+    opacity: 1;
+    width: 195px;
+    height: max-content;
+}
+
+#seta-checkbox, #seta-local-checkbox {
+    transition: transform 0.3s ease;
+    width: 28px;
+    height: 28px;
+    margin-bottom: -1px;
+}
+.checkbox-input .titulo-checkbox {
+    color: var(--white-default-100);
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+.checkbox-input .titulo-checkbox:hover {
+    color: var(--green-light-default-100);
+}
+.checkbox-input input:checked + .titulo-checkbox {
+    color: var(--green-light-default-100);
+    font-weight: 600;
+}
+.checkbox-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.checkbox-input input {
+    display: none;
+    cursor: pointer;
+    height: 120px;
+}
+.checkbox-input input+label:before {
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--green-light-default-100);
+    margin-right: 6px;
+}
+.checkbox-input input:checked+label:before {
+    background-color: var(--green-light-default-100);
+    transition: 80ms;
+}
+.checkbox-input {
+    cursor: pointer;
+}
+.titulo-checkbox {
+    font-size: 80%;
+    color: var(--white-default-100);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    white-space: nowrap;
+    width: 100%;
+} */
+
+/* Botão de ("mais") da home*/
+.button-mais {
+    background-color: var(--green-default-100);
+    color: var(--white-default-100);
+    padding:10px 25px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    display:flex;
+    gap: var(--spacing-xs);
+    display: flex;
+    align-content: center;
+}
+.button-mais:hover {
+    background-color: var(--green-light-default-100);
+    color: var(--black-default-100);
+}
+/* Botão de ("seta-calendario") do Perfil*/
+
+.button-seta-calendario{
+  border: none;
+  background-color: transparent;
+  margin: 18px 0 0 0;
+}
+.button-seta-calendario:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+.seta-calendario {
+  width: 30px;
+  height: 30px;
+  color: #388e3c;
+  cursor: pointer;
+}

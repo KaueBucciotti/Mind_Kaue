@@ -1,0 +1,117 @@
+@import url("./main.css");
+@import url("../styles/ui/buttons.css");
+
+section.login-inputs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.background-img-login-cadastro img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.container-input-login {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:20px 10px;
+
+    & h1{
+        font-weight: 100px;
+    }
+    & .inputs {
+        margin-top: var(--spacing-lg);
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        gap:5px;
+
+        & .login-titulo {
+            width: 100%;
+            right: 10px;
+            color: var(--dark-100);
+            display: flex;
+            padding: 5px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        & input {
+            padding: 15px;
+            border: 1px solid var(--gray-100);
+            outline: none;
+            font-size: 15px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        & .container-cadastrar-entrar {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            column-gap: 20px;
+            flex-wrap: wrap;
+            padding: 30px 20px;
+        }
+
+        & .link-cadastro {
+            padding: 10px 25px 10px 0;
+            text-decoration: underline;
+        }
+
+        & .link-cadastro:hover {
+            color: var(--deep-cerulean-100)
+        }
+
+    }
+}
+/* -------------OPTIONS---------------- */
+
+.container-options{
+    display: flex;
+    margin-top:20px;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--gray-100);
+    width:fit-content;
+    min-height: fit-content
+}
+.container-options button {
+    width:100%;
+    height:35px;
+    border:none;
+    mask-clip: border-box;
+    border-radius: var(--border-radius-lg);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: transparent;
+}
+
+.container-options button:hover {
+  background-color: var(--white-default-100);
+}
+
+/* Cor quando o botão estiver ativo */
+.container-options button.active {
+  background-color: var(--green-light-default-100);
+  color: var(--black-default-100);
+  transform: scale(1.05);
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+    section.login-inputs{
+        display: flex;
+        flex-direction: column;
+    }
+    section.login-inputs .background-img-login-cadastro img.background{
+        display: none;
+    }
+}

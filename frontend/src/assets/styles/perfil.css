@@ -1,0 +1,651 @@
+@import url("./main.css");
+@import url("./ui/buttons.css");
+@import url("./ui/icons.css");
+
+.container-section-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+/* Container principal com fundo verde claro */
+.perfil-container {
+  display: flex;
+  background: var(--green-light-default-100);
+  padding: 20px;
+  border-radius: 12px;
+  justify-content: space-between;
+  height: 400px;
+  margin-bottom: 2rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* Card de perfil */
+.card-perfil-content {
+  background: var(--white-default-100);
+  border-radius: var(--border-radius-md);
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Foto e informações */
+.foto-perfil {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.foto-perfil img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--green-light-default-100);
+}
+
+.container-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-perfil h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+}
+
+
+
+/* Botões e contatos */
+.settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.contato {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container-contatos{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container-config-artigos{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Botão de ("Config") do Perfil*/
+
+.button-config {
+  background: var(--green-default-100);
+  color: var(--white-default-100);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button-config:hover {
+  background: var(--sea-green-100);
+}
+
+.button-config a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* Calendário */
+.container-calendario {
+  background: var(--white-default-100);
+  border-radius: 10px;
+  padding: 12px 16px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.semana-nav {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+
+.dias {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0 0 0;
+}
+
+.coluna-dia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:auto;
+  /* altura suficiente para 3 horários + botão */
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.coluna-dia .footer-dia {
+  margin-top: auto;
+  /* empurra o botão para o final da coluna */
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dia strong {
+  font-size: 1rem;
+  color: var(--green-default-100);
+}
+
+.dia small {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.horario {
+  margin: 6px 0;
+  padding: 10px 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--green-light-default-100);
+  color: var(--black-default-100);
+  font-weight: 500;
+  text-align: center;
+}
+
+.horario:hover {
+  background: var(--green-default-100);
+  color: var(--white-default-100);
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.footer-dia {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-dia button {
+  background: var(--gray-100);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  max-width: 90px;
+  box-sizing: border-box;
+}
+
+.footer-dia button:hover {
+  background: var(--dove-gray-100);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  width: 100%;
+}
+
+.modal-content {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white-default-100);
+  border-radius: 12px;
+  padding: 32px 40px;
+  position: relative;
+}
+
+.fechar {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 2rem;
+  color: var(--black-default-100);
+}
+
+#modal-select-dia {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+#modal-select-dia:focus {
+  outline: none;
+  border: 2px solid var(--green-default-100);
+}
+
+#modal-horarios {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.ocupado-modal {
+  width: max-content;
+}
+
+/* Sobre ----------------------------- */
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.card-sobre-container {
+  width: 100%;
+  font-size: 1rem;
+  min-height: 100px;
+  border-radius: 10px;
+  border: 1px solid #666666;
+  padding: 10px;
+}
+
+.card-info-container h4 {
+  font-size: 1.1rem;
+  width: max-content;
+}
+
+.card-ficha-container {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  border: 1px solid #666666;
+  padding: 10px;
+}
+.card-ficha-container-psi{
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid #666666;
+  padding: 10px;
+}
+.container-horarios-psi h4{
+  font-size: 1.1rem;
+  width: max-content;
+}
+.container-horario-atendimento-psi{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 20px;
+}
+.container-horario-atendimento-psi p{
+  border: 1px solid #555;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px;
+
+}
+
+/* Notificacoes ----------------------------- */
+
+.card-notif-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.notificacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-Y: scroll;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  border-radius: 15px;
+  background-color: var(--red-default-100);
+  width: 100%;
+  height: 100%;
+}
+
+.notif-titulo {
+  font-size: 1.1rem;
+  color: var(--white-default-100);
+  margin: 10px;
+}
+
+.card-notif-session {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white-default-100);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 95%;
+  margin: 10px
+}
+
+.notificacoes::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Section--------------------------- */
+
+.sobre-notif-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 10rem;
+  width: 100%;
+
+}
+
+
+/* ------------------MEDIA--------------------------- */
+@media (max-width: 480px) {
+  .container-section-perfil {
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0.5rem;
+  }
+
+  .perfil-container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .card-perfil-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .foto-perfil {
+    gap: 10px;
+  }
+
+  .foto-perfil img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .info-perfil h3 {
+    font-size: 0.8rem;
+  }
+
+  .info-perfil p {
+    font-size: 0.7rem;
+  }
+
+  .info-perfil label {
+    font-size: 0.7rem;
+  }
+
+  .settings {
+    justify-content: space-between;
+  }
+
+  .contato {
+    gap: 4px;
+  }
+
+  .contato span {
+    font-size: 0.6rem;
+    text-wrap: nowrap;
+  }
+
+  .button-config {
+    font-size: 0.6rem;
+    padding: 4px;
+  }
+
+  .container-calendario {
+    padding: 5px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0.3rem;
+  }
+
+  .container-calendario h1 {
+    font-size: 1rem;
+  }
+
+  .semana-nav {
+    gap: 6px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dias {
+    gap: 7px;
+    margin: 12px 0 0 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .coluna-dia {
+    width: auto;
+    height: auto;
+    flex: 1;
+  }
+
+  .dia strong {
+    font-size: 0.6rem;
+  }
+
+  .dia small {
+    font-size: 0.6rem;
+  }
+
+  .horario {
+    font-size: 0.6rem;
+    padding: 2px 5px;
+    width: auto;
+    height: auto;
+  }
+
+  .footer-dia {
+    margin-top: auto;
+    padding: 0px;
+  }
+
+  .footer-dia button {
+    font-size: 0.6rem;
+    width: 100%;
+    padding: 2px 6px;
+  }
+
+  .sobre-notif-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 799px) {
+  .container-section-perfil {
+    align-items: center;
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 2rem;
+    
+  }
+
+  .perfil-container {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .card-perfil-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .foto-perfil {
+    gap: 10px;
+  }
+
+  .foto-perfil img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .info-perfil h3 {
+    font-size: 0.8rem;
+  }
+
+  .info-perfil p {
+    font-size: 0.7rem;
+  }
+
+  .info-perfil label {
+    font-size: 0.7rem;
+  }
+
+  .settings {
+    justify-content: space-between;
+  }
+
+  .contato {
+    gap: 4px;
+  }
+
+  .contato span {
+    font-size: 0.9rem;
+    text-wrap: nowrap;
+  }
+
+  .button-config {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .container-calendario {
+    padding: 5px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .container-calendario h1 {
+    font-size: 1rem;
+  }
+
+  .semana-nav {
+    gap: 6px;
+  }
+
+  .dias {
+    gap: 7px;
+    margin: 12px 0 0 0;
+  }
+
+  .coluna-dia {
+    max-width: max-content;
+    width: max-content;
+    height: auto;
+  }
+
+  .dia strong {
+    font-size: 0.6rem;
+  }
+
+  .dia small {
+    font-size: 0.6rem;
+  }
+
+  .horario {
+    font-size: 0.6rem;
+    padding: 2px 5px;
+  }
+
+  .footer-dia {
+    margin-top: auto;
+    padding: 0px;
+  }
+
+  .footer-dia button {
+    font-size: 0.6rem;
+    width: 100%;
+    padding: 2px 6px;
+  }
+
+  .sobre-notif-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+}
+@media (min-width: 800px) and (max-width: 1046px){
+  .horario{
+    padding: 5px;
+  }
+}
